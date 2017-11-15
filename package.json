@@ -1,0 +1,22 @@
+{
+  "name": "exedobot",
+  "version": "1.0.0",
+  "description": "An open source, general-purpose Discord bot written in Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OfficialExedo/ExedoBot.git"
+  },
+  "author": "Ethan Plant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OfficialExedo/ExedoBot/issues"
+  },
+  "homepage": "https://github.com/OfficialExedo/ExedoBot#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
+}

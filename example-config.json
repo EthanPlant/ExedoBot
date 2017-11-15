@@ -1,3 +1,4 @@
 {
-    "token": "YourSuperSecretToken"
+    "token": "YourSuperSecretToken",
+    "prefix": "!"
 }

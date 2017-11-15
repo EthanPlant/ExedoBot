@@ -7,9 +7,15 @@ client.on("ready", () => {
 });
 
 client.on("message", (message) => {
-    if (message.content.startsWith("ping")) {
-        message.channel.send("pong!");
-    };
+    if(!message.content.startsWith(config.prefix) || message.author.bot) return;
+
+    if(message.content.startsWith(config.prefix + "ping")) {
+        message.channel.send("Pong!");
+    } else if(message.content.startsWith(config.prefix + "info")) {
+        message.channel.send("ExedoBot is an open-source, general purpose Discord bot.");
+    } else {
+        message.channel.send("Command not recognized");
+    }
 });
 
 client.login(config.token);

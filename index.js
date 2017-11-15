@@ -3,6 +3,13 @@ const client = new Discord.Client();
 const config = require('./config.json');
 
 client.on("ready", () => {
+    client.user.setStatus('online');
+    client.user.setPresence({
+        game: {
+            name: 'test game name',
+        }
+    });
+
     console.log("bot started");
 });
 

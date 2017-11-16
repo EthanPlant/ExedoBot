@@ -1,55 +1,41 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const fs = require('fs');
+
 const config = require('./config.json');
 
-client.on("ready", () => {
-    client.user.setStatus('online');
-    client.user.setPresence({
-        game: {
-            name: 'test game name',
-        }
+// Attach events
+fs.readdir('./events/', (err, files) => {
+    if (err) return console.error(err);
+
+    files.forEach(file => {
+        let eventFunction = require(`./events/${file}`);
+        let eventName = file.split('.')[0];
+        
+        client.on(eventName, (...args) => {
+            eventFunction.run(client, ...args);
+        });
     });
-
-    console.log("bot started");
 });
 
-client.on("message", (message) => {
-    if(!message.content.startsWith(config.prefix) || message.author.bot) return;
+client.on('message', (message) => {
+    if (message.author.bot) return;
+        if (message.content.indexOf(config.prefix) !== 0) return;
 
-    const args = message.content.slice(config.prefix.length).trim().split(/ +/g); // Get command arguements
-    const command = args.shift().toLowerCase();
+        // Define args
+        const args = message.content.slice(config.prefix.length).split(/ +/g);
+        const command = args.shift().toLowerCase();
 
-    switch(command) {
-        case 'ping':
-            message.channel.send('Pong!');
-            break;
-        case 'info':
-            message.channel.send('ExedoBot is an open-source, general purpose Discord bot.');
-            break;
-        case 'help':
-            if(!args[0]) {
-                message.channel.send('Please specify a command.');
+        try {
+            if(fs.exists(`./commands/${command}.js`)) {
+                let commandFile = require(`./commands/${command}.js`);
+                commandFile.run(client, message, args);
             } else {
-                switch(args[0]) {
-                    case 'ping':
-                        message.channel.send('Replys pong.');
-                        break;
-                    case 'info':
-                        message.channel.send('Gives info about the bot.');
-                        break;
-                    case 'help':
-                        message.channel.send('Gives help about a given command.');
-                        break;
-                    default:
-                        message.channel.send('Command unknown.');
-                        break;
-                }
+                message.channel.send('Command unknown');
             }
-            break;
-        default:
-            message.channel.send('Command unknown');
-            break;
-    }
+        } catch (err) {
+            console.error(err);
+        }
 });
 
-client.login(config.token);
+    client.login(config.token);

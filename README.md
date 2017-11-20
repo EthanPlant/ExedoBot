@@ -45,9 +45,11 @@ An open source, general-purpose Discord bot written in Javascript.
  
  # Commands:
  **Help:**
+ 
  `!help <command>` - Gives help based on a given command.
  
 **Information:**
+
 `avatar [@user]` - Returns the avatar of the mentioned user, if none is mentioned it returns the sender's avatar.
 
 `!info` - Gives info on the bot.

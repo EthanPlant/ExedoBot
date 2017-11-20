@@ -49,7 +49,9 @@ An open source, general-purpose Discord bot written in Javascript.
  
 **Information:**
 `avatar [@user]` - Returns the avatar of the mentioned user, if none is mentioned it returns the sender's avatar.
+
 `!info` - Gives info on the bot.
+
 `!ping` - Pong! Check the bot is functioning.
 
 

@@ -27,7 +27,7 @@ client.on('message', (message) => {
         const command = args.shift().toLowerCase();
 
         try {
-            if(fs.exists(`./commands/${command}.js`)) {
+            if(fs.existsSync(`./commands/${command}.js`)) {
                 let commandFile = require(`./commands/${command}.js`);
                 commandFile.run(client, message, args);
             } else {
@@ -38,4 +38,4 @@ client.on('message', (message) => {
         }
 });
 
-    client.login(config.token);
+client.login(config.token);

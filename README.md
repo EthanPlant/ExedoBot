@@ -50,11 +50,17 @@ An open source, general-purpose Discord bot written in Javascript.
  
 **Information:**
 
-`avatar [@user]` - Returns the avatar of the mentioned user, if none is mentioned it returns the sender's avatar.
+`!avatar [@user]` - Returns the avatar of the mentioned user, if none is mentioned it returns the sender's avatar.
+
+`!channelinfo [channel]` - Returns info about this channel, unless specified.
 
 `!info` - Gives info on the bot.
 
 `!ping` - Pong! Check the bot is functioning.
+
+`!serverinfo` - Gives information about the server.
+
+`!userinfo [@user]` - Gives info about a given user. If none is given it gives info about the sender.
 
 
 # Feature Requests:

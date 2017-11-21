@@ -1,4 +1,5 @@
 {
     "token": "YourSuperSecretToken",
-    "prefix": "!"
+    "prefix": "!",
+    "serverinfo": "A nice Discord server"
 }

@@ -4,6 +4,10 @@ const fs = require('fs');
 
 const config = require('./config.json');
 
+const version = "0.1";
+
+exports.version = version;
+
 // Attach events
 fs.readdir('./events/', (err, files) => {
     if (err) return console.error(err);

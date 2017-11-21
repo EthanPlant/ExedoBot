@@ -60,7 +60,11 @@ An open source, general-purpose Discord bot written in Javascript.
 
 `!serverinfo` - Gives information about the server.
 
+`!uptime` - Gives the bot's uptime.
+
 `!userinfo [@user]` - Gives info about a given user. If none is given it gives info about the sender.
+
+`!version` - Gives the current version of the bot.
 
 
 # Feature Requests:

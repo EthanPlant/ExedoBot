@@ -47,6 +47,12 @@ An open source, general-purpose Discord bot written in Javascript.
  **Help:**
  
  `!help <command>` - Gives help based on a given command.
+
+ **Fun:**
+
+ `copypasta [number]` - Replies a random copypasta unless specified.
+ 
+ `lenny [number]` - Replies a random lenny face unless specified.
  
 **Information:**
 

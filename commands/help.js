@@ -5,6 +5,17 @@ exports.run = (client, message, args) => {
         message.channel.send('Please specify a command.').catch(console.error);
     } else {
         switch(args[0]) {
+            case 'fun':
+                let embed = new Discord.RichEmbed()
+                .setTitle("Fun Help")
+                .addField("!8ball <question>", "Answers the question.")
+                .addField("!coin", "Flips a coin.")
+                .addField("!copypasta [number]", "Replies a random copypasta, unless specified.")
+                .addField("!decide <option> <option>", "Chooses between two options.")
+                .addField("!lenny [number]", "Returns a random lenny face unless specified.")
+                .addField("!roll", "Rolls a dice.");
+                message.channel.send(embed);
+                break;
             case 'info':
                 let embed = new Discord.RichEmbed()
                 .setTitle("Info Help")
@@ -20,6 +31,7 @@ exports.run = (client, message, args) => {
                 break;
             default:
                 message.channel.send("Can't provide help with that.")
+                break;
         }
     }
 }

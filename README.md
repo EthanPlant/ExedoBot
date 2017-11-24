@@ -29,7 +29,7 @@ An open source, general-purpose Discord bot written in Javascript.
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
 - Rename `example-config.json` to `config.json` and add your Discord API key from your bot user.
-- Start the bot with `node index`.
+- Start the bot with `npm index`.
 
 ### Adding the bot to a server
 - Find your bot account's Client ID (found in your developer console).
@@ -41,7 +41,7 @@ An open source, general-purpose Discord bot written in Javascript.
  - `cd` to the bot's directory if you aren't there already.
  - `git pull` to pull the latest code from the repo.
  - `npm update` to update dependencies.
- - Restart the bot with `node index`.
+ - Restart the bot with `npm index`.
  
  # Commands:
  **Help:**

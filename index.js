@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const config = require('./config.json');
 
-const version = "0.1";
+const version = "0.2";
 
 exports.version = version;
 

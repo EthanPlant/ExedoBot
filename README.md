@@ -55,6 +55,8 @@ An open source, general-purpose Discord bot written in Javascript.
 `!coin` - Flips a coin.
 
 `!copypasta [number]` - Replies a random copypasta unless specified.
+
+`!decide <option> <option>` - Decides between two options.
  
 `!lenny [number]` - Replies a random lenny face unless specified.
 

@@ -9,6 +9,7 @@ An open source, general-purpose Discord bot written in Javascript.
 
 ### Windows:
 - Install [Node.js](https://nodejs.org/en/)
+- Intstal [FFmpeg](https://ffmpeg.org/download.html)
 - Clone the repository (`git clone https://OfficialExedo/ExedoBot.git` in a command line).
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
@@ -16,7 +17,8 @@ An open source, general-purpose Discord bot written in Javascript.
 - Start the bot with `node index`.
 
 ### Linux:
--  Install Node.JS from your package manager (`sudo apt install nodejs npm` in Debian based distros).
+-  Install Node.JS from your package manager (`sudo apt install nodejs npm` on Debian based distros).
+- Install FFmpef from your package manager (`sudo apt install ffmpeg` on Debian based distros)
 - Clone the repository (`git clone https://OfficialExedo/ExedoBot.git` in a command line).
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
@@ -25,6 +27,7 @@ An open source, general-purpose Discord bot written in Javascript.
 
 ### Mac:
 - Install [Node.js](https://nodejs.org/en/)
+- Intstal [FFmpeg](https://ffmpeg.org/download.html)
 - Clone the repository (`git clone https://OfficialExedo/ExedoBot.git` in a command line).
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.

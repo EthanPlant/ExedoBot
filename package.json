@@ -19,7 +19,8 @@
   "homepage": "https://github.com/OfficialExedo/ExedoBot#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "ytdl-core": "^0.18.2"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"

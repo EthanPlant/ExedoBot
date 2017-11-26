@@ -1,5 +1,6 @@
 {
     "token": "YourSuperSecretToken",
     "prefix": "!",
-    "serverinfo": "A nice Discord server"
+    "serverinfo": "A nice Discord server",
+    "osu-key": "YourSuperSecretOsuAPIKey"
 }

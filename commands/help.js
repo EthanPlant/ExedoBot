@@ -29,6 +29,21 @@ exports.run = (client, message, args) => {
                 .addField("!version", "Gives the current version of the bot");
                 message.channel.send(embed);
                 break;
+            case 'music':
+                let embed = new Discord.RichEmbed()
+                .setTitle("Music Help")
+                .addField("!play <link>", "Plays a song from a given YouTube link.")
+                .addField("!skip", "Skips the current song.")
+                .addField("!stop", "Stop playing music");
+                message.channel.send(embed);
+                break;
+            case 'osu':
+                let embed = new Discord.RichEmbed()
+                .setTitle("Osu help")
+                .addField("!osu <name>", "Gives data on a given osu player.")
+                .addField("!osub <link> <version>", "Gives data on a given osu beatmap.");
+                message.channel.send(embed);
+                break;
             default:
                 message.channel.send("Can't provide help with that.")
                 break;

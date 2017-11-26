@@ -92,6 +92,12 @@ An open source, general-purpose Discord bot written in Javascript.
 
 `!stop` - Stops playing music.
 
+**Osu**
+
+`!osu <name>` - Shows information about a given osu player
+
+`!osub <link> <version>` - Shows information about a given beatmap.
+
 
 # Feature Requests:
 Have a feature idea? Feel free to open an [issue](https://github.com/OfficialExedo/ExedoBot/issues) to give it to us!

@@ -49,6 +49,13 @@ exports.run = (client, message, args) => {
 
     server.queue[0] = args[0];
 
+    server.queue.push(args[0]);
+
+    YTDL.getInfo(server.queue[server.queue.length - 1], (err, info) => {
+        if(err) throw err;
+        message.channel.send("Added " + info.title + " to the queue");
+    });
+
     if(!message.guild.voiceConnection) {
         message.member.voiceChannel.join().then((connection) => {
             play(connection, message);

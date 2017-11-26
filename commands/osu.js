@@ -14,15 +14,18 @@ exports.run = (client, message, args) => {
             if(err) throw err;
 
             let info = JSON.parse(body);
+            let accuracy = parseFloat(info[0].accuracy).toLocaleString('en-US', {maximumFractionDigits: 2, useGrouping: false});
+            let level = parseFloat(info[0].level).toLocaleString('en-US', {maximumFractionDigits: 2, useGrouping: false});
+
             let embed = new Discord.RichEmbed()
             .setTitle(`Info for ${info[0].username}`)
             .setURL(`https://osu.ppy.sh/u/${info[0].user_id}`)
             .setThumbnail(`https://a.ppy.sh/${info[0].user_id}`)
-            .addField("Playcount", info[0].playcount)
-            .addField("Ranked Score", info[0].ranked_score)
-            .addField("Level", info[0].level)
-            .addField("PP", info[0].pp_rank)
-            .addField("Accuracy", info[0].accuracy);
+            .addField("Playcount", parseInt(info[0].playcount).toLocaleString('en-US'))
+            .addField("Ranked Score", parseInt(info[0].ranked_score).toLocaleString('en-US'))
+            .addField("Level", level)
+            .addField("PP", parseInt(info[0].pp_rank).toLocaleString('en-US'))
+            .addField("Accuracy", accuracy);
             message.channel.send(embed);
         });
     }

@@ -10,6 +10,7 @@ An open source, general-purpose Discord bot written in Javascript.
 ### Windows:
 - Install [Node.js](https://nodejs.org/en/)
 - Intstal [FFmpeg](https://ffmpeg.org/download.html)
+- Run `npm i -g windows-build-tools` in an admin powershell.
 - Clone the repository (`git clone https://OfficialExedo/ExedoBot.git` in a command line).
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
@@ -82,6 +83,14 @@ An open source, general-purpose Discord bot written in Javascript.
 `!userinfo [@user]` - Gives info about a given user. If none is given it gives info about the sender.
 
 `!version` - Gives the current version of the bot.
+
+**Music**
+
+`!play <YouTube URL>` - Plays a song from a given YouTube URL.
+
+`!skip` - Skips to the next song in the queue.
+
+`!stop` - Stops playing music.
 
 
 # Feature Requests:

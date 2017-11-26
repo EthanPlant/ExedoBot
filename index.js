@@ -6,7 +6,10 @@ const config = require('./config.json');
 
 const version = "0.2";
 
+let servers = {};
+
 exports.version = version;
+exports.servers = servers;
 
 // Attach events
 fs.readdir('./events/', (err, files) => {

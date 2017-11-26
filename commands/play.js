@@ -1,10 +1,24 @@
 const servers = require('./../index.js').servers;
 const YTDL = require('ytdl-core');
+const Discord = require('discord.js');
 
 function play(connection, message) {
     let server = servers[message.guild.id];
 
     server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
+    
+    YTDL.getInfo(server.queue[0], (err, info) => {
+        if(err) throw err;
+        let lengthS = Math.floor(info.length_seconds % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false});
+        let lengthM = Math.floor(info.length_seconds % (60 * 60) / 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false});
+        let embed = new Discord.RichEmbed()
+        .setTitle("Now Playing: " + info.title)
+        .setThumbnail(info.thumbnail_url)
+        .setTimestamp()
+        .setDescription(info.description.substr(0, 139) + "...")
+        .setFooter("Length: " + lengthM + ":" + lengthS);
+        message.channel.send(embed);
+    });
 
     server.queue.shift();
 

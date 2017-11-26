@@ -1,27 +1,29 @@
-const osuAPI = require('osu-api');
+const request = require('request');
 const config = require('./../config.json');
-const Discord = require('discord.js')
+const Discord = require('discord.js');
 
-const osu = new osuAPI.Api(config.osukey);
+const apiKey = config.osukey;
 
 exports.run = (client, message, args) => {
     if(!args[0]) {
-        message.channel.send("Please specify a user.");
-        return;
-    }
+        message.channel.send("Please specify a user");
+    } else {
+        let url = `https://osu.ppy.sh/api/get_user?k=${apiKey}&u=${args[0]}&type=String`;
 
-    osu.getUser(args[0], (err, info) => {
-        if(err) throw err;
-        let userId = info.user_id;
-        let embed = new Discord.RichEmbed()
-        .setTitle("Info for " + info.username)
-        .setURL('https://osu.ppy.sh/u/' + userId)
-        .setThumbnail('https://a.ppy.sh/' + userId)
-        .addField("Playcount", info.playcount)
-        .addField("Ranked Score", info.ranked_score)
-        .addField("Level", info.level)
-        .addField("PP", info.pp_rank)
-        .addField("Accuracy", info.accuracy);
-        message.channel.send(embed);
-    });
+        request(url, (err, res, body) => {
+            if(err) throw err;
+
+            let info = JSON.parse(body);
+            let embed = new Discord.RichEmbed()
+            .setTitle(`Info for ${info[0].username}`)
+            .setURL(`https://osu.ppy.sh/u/${info[0].user_id}`)
+            .setThumbnail(`https://a.ppy.sh/${info[0].user_id}`)
+            .addField("Playcount", info[0].playcount)
+            .addField("Ranked Score", info[0].ranked_score)
+            .addField("Level", info[0].level)
+            .addField("PP", info[0].pp_rank)
+            .addField("Accuracy", info[0].accuracy);
+            message.channel.send(embed);
+        });
+    }
 }

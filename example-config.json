@@ -2,5 +2,6 @@
     "token": "YourSuperSecretToken",
     "prefix": "!",
     "serverinfo": "A nice Discord server",
-    "osu-key": "YourSuperSecretOsuAPIKey"
+    "osu-key": "YourSuperSecretOsuAPIKey",
+    "botowner": "YourDiscordUserID"
 }

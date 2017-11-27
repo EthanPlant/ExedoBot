@@ -44,12 +44,6 @@ exports.run = (client, message, args) => {
         return;
     }
 
-    if(!servers[message.guild.id]) {
-        servers[message.guild.id] = {
-            queue: []
-        }
-    }
-
     let server = servers[message.guild.id];
 
     server.queue[0] = args[0];

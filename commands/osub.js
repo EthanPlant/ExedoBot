@@ -13,9 +13,17 @@ exports.run = (client, message, args) => {
         let url = `https://osu.ppy.sh/api/get_beatmaps?k=${apiKey}&s=${id}`;
 
         request(url, (err, res, body) => {
-            if(err) throw err;
-
             let info = JSON.parse(body);
+
+            if(info.erorr) {
+                console.log(info.error);
+                return;
+            }
+
+            if(info.length === 0) {
+                message.channel.send("Can't find beatmap");
+                return;
+            }
 
             let difficulty = parseFloat(info[beatmap].difficultyrating).toLocaleString('en-US', {maximumFractionDigits: 2, useGrouping: false});
             let passRate = parseFloat(info[beatmap].passcount / info[beatmap].playcount * 100).toLocaleString('en-US', {maximumFractionDigits: 2, useGrouping: false});

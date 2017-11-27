@@ -11,9 +11,15 @@ exports.run = (client, message, args) => {
         let url = `https://osu.ppy.sh/api/get_user?k=${apiKey}&u=${args[0]}&type=String`;
 
         request(url, (err, res, body) => {
-            if(err) throw err;
-
             let info = JSON.parse(body);
+            if(info.error) {
+                console.log(info.error);
+                return;
+            }
+            if(info.length === 0) {
+                message.channel.send("Unknown user");
+                return;
+            }
             let accuracy = parseFloat(info[0].accuracy).toLocaleString('en-US', {maximumFractionDigits: 2, useGrouping: false});
             let level = parseFloat(info[0].level).toLocaleString('en-US', {maximumFractionDigits: 2, useGrouping: false});
 

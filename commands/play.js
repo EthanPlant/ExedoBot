@@ -34,6 +34,11 @@ exports.run = (client, message, args) => {
         return;
     }
 
+    if(!YTDL.validateURL(args[0])) {
+        message.channel.send("Please provide a valid YouTube link.");
+        return;
+    }
+
     if(!message.member.voiceChannel) {
         message.channel.send("You must be in a voice channel");
         return;

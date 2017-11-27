@@ -4,11 +4,9 @@ const fs = require('fs');
 
 const config = require('./config.json');
 
-const version = "0.2";
 
 let servers = {};
 
-exports.version = version;
 exports.servers = servers;
 
 // Attach events

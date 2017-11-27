@@ -9,13 +9,14 @@ let servers = {};
 
 exports.servers = servers;
 
-// idk why this doesn't work in it's own file.
 client.on('guildCreate', (guild) => {
     if(!servers[guild.id]) {
         servers[guild.id] = {
-            queue: []
+            queue: [],
+            info: "Be sure to set this using !setinfo!"
         }
     }
+    console.log(servers[guild.id]);
 });
 
 // Attach events

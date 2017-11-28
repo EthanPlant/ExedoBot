@@ -5,22 +5,9 @@ const fs = require('fs');
 const config = require('./config.json');
 
 
-let servers = require('./data/servers.json');
+let servers = {};
 
 exports.servers = servers;
-
-client.on('guildCreate', (guild) => {
-    if(!servers[guild.id]) {
-        servers[guild.id] = {
-            queue: [],
-            info: "Be sure to set this using !setinfo!"
-        }
-    }
-    let json = JSON.stringify(servers);
-    fs.writeFile('./data/servers.json', json, 'utf8');
-    console.log(servers[guild.id]);
-});
-
 
 // Attach events
 fs.readdir('./events/', (err, files) => {

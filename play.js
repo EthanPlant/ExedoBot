@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 function play(connection, message) {
     let server = servers[message.guild.id];
 
-    server.dispatcher = connection.playStream(YTDL(server.queue[0], {filter: "audioonly"}));
+    server.dispatcher = connection.playStream(YTDL(server.queue[0], {quality: lowest, filter: "audioonly"}));
     
     YTDL.getInfo(server.queue[0], (err, info) => {
         if(err) throw err;
@@ -42,12 +42,6 @@ exports.run = (client, message, args) => {
     if(!message.member.voiceChannel) {
         message.channel.send("You must be in a voice channel");
         return;
-    }
-
-    if(!servers[message.guild.id]) {
-        servers[message.guild.id] = {
-            queue: []
-        }
     }
 
     let server = servers[message.guild.id];

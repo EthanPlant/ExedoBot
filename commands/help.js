@@ -3,6 +3,7 @@ const Discord = require('discord.js')
 exports.run = (client, message, args) => {
     if(!args[0]) {
         message.channel.send('Please specify a command.').catch(console.error);
+        return;
     } else {
         switch(args[0]) {
             case 'admin':
@@ -10,6 +11,7 @@ exports.run = (client, message, args) => {
                 .setTitle("Admin Help")
                 .addField("!setinfo <info>", "Sets the info for the server");
                 mesasge.channel.send(embed);
+                break;
             case 'fun':
                 let embed = new Discord.RichEmbed()
                 .setTitle("Fun Help")

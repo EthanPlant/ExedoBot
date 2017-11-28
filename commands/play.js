@@ -12,11 +12,11 @@ function play(connection, message) {
         let lengthS = Math.floor(info.length_seconds % 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false});
         let lengthM = Math.floor(info.length_seconds % (60 * 60) / 60).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping: false});
         let embed = new Discord.RichEmbed()
-        .setTitle("Now Playing: " + info.title)
+        .setTitle(`Now Playing: ${info.title}`)
         .setThumbnail(info.thumbnail_url)
         .setTimestamp()
         .setDescription(info.description.substr(0, 139) + "...")
-        .setFooter("Length: " + lengthM + ":" + lengthS);
+        .setFooter(`Length: ${lengthM}:${lengthS}`);
         message.channel.send(embed);
     });
 
@@ -52,7 +52,7 @@ exports.run = (client, message, args) => {
 
     YTDL.getInfo(server.queue[server.queue.length - 1], (err, info) => {
         if(err) throw err;
-        message.channel.send("Added " + info.title + " to the queue");
+        message.channel.send(`"Added ${info.title} to the queue`);
     });
 
     if(!message.guild.voiceConnection) {

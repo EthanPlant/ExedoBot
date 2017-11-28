@@ -2,5 +2,6 @@
     "token": "YourSuperSecretToken",
     "prefix": "!",
     "osu-key": "YourSuperSecretOsuAPIKey",
-    "botowner": "YourDiscordUserID"
+    "botowner": "YourDiscordUserID",
+    "gamename": "I'm a bot beep boop"
 }

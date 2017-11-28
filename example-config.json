@@ -3,5 +3,6 @@
     "prefix": "!",
     "osu-key": "YourSuperSecretOsuAPIKey",
     "botowner": "YourDiscordUserID",
-    "gamename": "I'm a bot beep boop"
+    "gamename": "I'm a bot beep boop",
+    "serverinfo": "Some random server info"
 }

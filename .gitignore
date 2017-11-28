@@ -60,3 +60,5 @@ typings/
 # config file
 config.json
 
+# server list
+data/servers.json

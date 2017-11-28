@@ -30,7 +30,7 @@
 ## Technical Features
 - Added nodemon dependency.
 
-# 1.0.0
+# 1.0.0 (November 27, 2017)
 ## OUT OF PRERELEASE BABY
 
 ## Features
@@ -49,3 +49,8 @@
 ## Technical Features:
 - Added request, ytdl-core, and fs dependancies.
 - Server information is now saved in the servers.json folder.
+
+## Mid Patch Updates:
+- Hotfixed bug causing crash on server connect (full fix to come in 1.1.0)
+    - `!setinfo` HAS BEEN REMOVED AND SERVER INFO HAS BEEN MOVED BACK INTO CONFIG.JSON. SHOULD BE RETURNING ASAP.
+- Hotfixed !avatar not working when a user is mentioned.

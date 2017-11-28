@@ -29,3 +29,23 @@
 
 ## Technical Features
 - Added nodemon dependency.
+
+# 1.0.0
+## OUT OF PRERELEASE BABY
+
+## Features
+- Added music commands
+    - !play
+    - !skip
+    - !stop
+- Added osu commands
+    - !osu
+    - !osub
+- Added invite command
+- Currently playing game is now configurable
+
+    See [README](README.md) for more information.
+
+## Technical Features:
+- Added request, ytdl-core, and fs dependancies.
+- Server information is now saved in the servers.json folder.

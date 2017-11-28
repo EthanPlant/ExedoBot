@@ -15,6 +15,8 @@ An open source, general-purpose Discord bot written in Javascript.
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
 - Rename `example-config.json` to `config.json` and add your Discord API key from your bot user.
+    - Add an osu API key if you want osu commands to work.
+- Rename `example-servers.json` in the data folder to `servers.json` DO NOT TOUCH THIS FILE.
 - Start the bot with `node index`.
 
 ### Linux:
@@ -24,6 +26,8 @@ An open source, general-purpose Discord bot written in Javascript.
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
 - Rename `example-config.json` to `config.json` and add your Discord API key from your bot user.
+    - Add an osu API key if you want osu commands to work.
+- Rename `example-servers.json` in the data folder to `servers.json` DO NOT TOUCH THIS FILE.
 - Start the bot with `node index`.
 
 ### Mac:
@@ -33,12 +37,34 @@ An open source, general-purpose Discord bot written in Javascript.
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
 - Rename `example-config.json` to `config.json` and add your Discord API key from your bot user.
+    - Add an osu API key if you want osu commands to work.
+- Rename `example-servers.json` in the data folder to `servers.json` DO NOT TOUCH THIS FILE.
 - Start the bot with `npm index`.
+
 
 ### Adding the bot to a server
 - Find your bot account's Client ID (found in your developer console).
 - Visit the following link:  https://discordapp.com/oauth2/authorize?client_id=INSERT_CLIENT_ID_HERE&scope=bot, replacing your `INSERT_CLIENT_ID_HERE` with your client ID.
  - Select the server you want the bot to join. You MUST have the "Manage Server" permission.
+
+### Configuration:
+
+**Setting game**:
+
+- Change `gamename` in config.json
+
+**Setting prefix:**
+
+- Change `prefix` in config.json
+
+**Setting yourself as bot owner:**
+
+- [Get your discord user id](http://bit.ly/2AfUu40)
+- Change `botowner` to your id
+
+**Setting server info:**
+
+- Run `!setinfo <info>` in your discord server with the bot connected. YOU MUST BE THE BOT OWNER OR HAVE THE 'MANAGE SERVER' PERMISSION
  
  ## Updating
  - Stop the bot if it's currently running (Use Ctrl-C on the terminal window).

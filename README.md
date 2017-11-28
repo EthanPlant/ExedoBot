@@ -50,7 +50,17 @@ An open source, general-purpose Discord bot written in Javascript.
  # Commands:
  **Help:**
  
+ `!help admin` - Gives help for admin commands.
+
+ `!help fun` - Gives help for fun commands.
+
  `!help info` - Gives help for info commands.
+
+ `!help music` - Gives help for music commands.
+
+ `!help osu` - Gives help for osu commands.
+
+ `!help useful` - Gives help for useful commands.
 
  **Fun:**
 
@@ -84,7 +94,7 @@ An open source, general-purpose Discord bot written in Javascript.
 
 `!version` - Gives the current version of the bot.
 
-**Music**
+**Music:**
 
 `!play <YouTube URL>` - Plays a song from a given YouTube URL.
 
@@ -92,11 +102,19 @@ An open source, general-purpose Discord bot written in Javascript.
 
 `!stop` - Stops playing music.
 
-**Osu**
+**Osu:**
 
 `!osu <name>` - Shows information about a given osu player
 
 `!osub <link> <version>` - Shows information about a given beatmap.
+
+**Useful:**
+
+`!invite` - Gives an invite link to the server.
+
+**Admin:**
+
+`!setinfo <info>` - Sets the server info.
 
 
 # Feature Requests:

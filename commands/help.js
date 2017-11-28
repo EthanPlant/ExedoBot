@@ -5,6 +5,11 @@ exports.run = (client, message, args) => {
         message.channel.send('Please specify a command.').catch(console.error);
     } else {
         switch(args[0]) {
+            case 'admin':
+                let embed = new Discord.RichEmbed()
+                .setTitle("Admin Help")
+                .addField("!setinfo <info>", "Sets the info for the server");
+                mesasge.channel.send(embed);
             case 'fun':
                 let embed = new Discord.RichEmbed()
                 .setTitle("Fun Help")
@@ -42,6 +47,12 @@ exports.run = (client, message, args) => {
                 .setTitle("Osu help")
                 .addField("!osu <name>", "Gives data on a given osu player.")
                 .addField("!osub <link> <version>", "Gives data on a given osu beatmap.");
+                message.channel.send(embed);
+                break;
+            case 'useful':
+                let embed = new Discord.RichEmbed()
+                .setTitle("Useful Help")
+                .addField("!invite", "Produces an invite link");
                 message.channel.send(embed);
                 break;
             default:

@@ -1,6 +1,6 @@
 {
   "name": "exedobot",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-beta",
   "description": "An open source, general-purpose Discord bot written in Javascript.",
   "main": "index.js",
   "scripts": {

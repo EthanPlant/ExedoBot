@@ -1,6 +1,4 @@
-const servers = require('./../index').servers;
-
 exports.run = (client, message, args) => {
-    let info = require('./../config.json').serverinfo;
-    message.channel.send(info);
+  let info = require('./../config.json').serverinfo
+  message.channel.send(info)
 }

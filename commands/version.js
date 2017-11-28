@@ -1,5 +1,5 @@
-const version = require('./../index.js').version
+const version = require('./../package.json').version
 
 exports.run = (client, message, args) => {
-    message.channel.send("Running version " + version + " of ExedoBot");
+    message.channel.send(`Running version ${version} of ExedoBot`);
 }

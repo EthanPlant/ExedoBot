@@ -1,10 +1,10 @@
 {
   "name": "exedobot",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "An open source, general-purpose Discord bot written in Javascript.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon index.js --ignore data/servers.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,10 @@
   "homepage": "https://github.com/OfficialExedo/ExedoBot#readme",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "node-opus": "^0.2.7",
+    "request": "^2.83.0",
+    "ytdl-core": "^0.18.2"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"

@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
             message.channel.send("User has no avatar!");
         } else {
             let embed = new Discord.RichEmbed()
-            .setTitle(message.author.username +"'s avatar")
+            .setTitle(`${message.author.username}'s avatar`)
             .setImage(message.author.avatarURL);
             message.channel.send(embed)
         }
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
             message.channel.send("User has no avatar!");
         } else {
             let embed = new Discord.RichEmbed()
-            .setTitle(user.username + "'s avatar")
+            .setTitle((`${message.author.username}'s avatar`)
             .setImage(user.avatarURL);
             message.channel.send(embed);
         }

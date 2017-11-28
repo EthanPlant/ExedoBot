@@ -5,8 +5,8 @@ exports.run = (client, message, args) => {
         let user = message.author;
         let embed = new Discord.RichEmbed()
         .setThumbnail(user.avatarURL)
-        .setTitle("Info about " + user.username)
-        .addField("Name", user.username + "#" + user.discriminator)
+        .setTitle(`Info about ${user.username}`)
+        .addField("Name", `${user.username}#${user.discriminator}`)
         .addField("ID", user.id)
         .addField("Created On", user.createdAt);
         message.channel.send(embed);
@@ -14,8 +14,8 @@ exports.run = (client, message, args) => {
         let user = message.mentions.users.first();
         let embed = new Discord.RichEmbed()
         .setThumbnail(user.avatarURL)
-        .setTitle("Info about " + user.username)
-        .addField("Name", user.username + "#" + user.discriminator)
+        .setTitle(`Info about ${user.username}`)
+        .addField("Name", `${user.username}#${user.discriminator}`)
         .addField("ID", user.id)
         .addField("Created On", user.createdAt);
         message.channel.send(embed);

@@ -9,6 +9,8 @@ An open source, general-purpose Discord bot written in Javascript.
 
 ### Windows:
 - Install [Node.js](https://nodejs.org/en/)
+- Intstal [FFmpeg](https://ffmpeg.org/download.html)
+- Run `npm i -g windows-build-tools` in an admin powershell.
 - Clone the repository (`git clone https://OfficialExedo/ExedoBot.git` in a command line).
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
@@ -16,7 +18,8 @@ An open source, general-purpose Discord bot written in Javascript.
 - Start the bot with `node index`.
 
 ### Linux:
--  Install Node.JS from your package manager (`sudo apt install nodejs npm` in Debian based distros).
+-  Install Node.JS from your package manager (`sudo apt install nodejs npm` on Debian based distros).
+- Install FFmpef from your package manager (`sudo apt install ffmpeg` on Debian based distros)
 - Clone the repository (`git clone https://OfficialExedo/ExedoBot.git` in a command line).
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
@@ -25,11 +28,12 @@ An open source, general-purpose Discord bot written in Javascript.
 
 ### Mac:
 - Install [Node.js](https://nodejs.org/en/)
+- Intstal [FFmpeg](https://ffmpeg.org/download.html)
 - Clone the repository (`git clone https://OfficialExedo/ExedoBot.git` in a command line).
 - `cd` to the ExedoBot directory.
 - Install dependencies with `npm install` in a command line.
 - Rename `example-config.json` to `config.json` and add your Discord API key from your bot user.
-- Start the bot with `node index`.
+- Start the bot with `npm index`.
 
 ### Adding the bot to a server
 - Find your bot account's Client ID (found in your developer console).
@@ -41,12 +45,22 @@ An open source, general-purpose Discord bot written in Javascript.
  - `cd` to the bot's directory if you aren't there already.
  - `git pull` to pull the latest code from the repo.
  - `npm update` to update dependencies.
- - Restart the bot with `node index`.
+ - Restart the bot with `npm index`.
  
  # Commands:
  **Help:**
  
+ `!help admin` - Gives help for admin commands.
+
+ `!help fun` - Gives help for fun commands.
+
  `!help info` - Gives help for info commands.
+
+ `!help music` - Gives help for music commands.
+
+ `!help osu` - Gives help for osu commands.
+
+ `!help useful` - Gives help for useful commands.
 
  **Fun:**
 
@@ -79,6 +93,28 @@ An open source, general-purpose Discord bot written in Javascript.
 `!userinfo [@user]` - Gives info about a given user. If none is given it gives info about the sender.
 
 `!version` - Gives the current version of the bot.
+
+**Music:**
+
+`!play <YouTube URL>` - Plays a song from a given YouTube URL.
+
+`!skip` - Skips to the next song in the queue.
+
+`!stop` - Stops playing music.
+
+**Osu:**
+
+`!osu <name>` - Shows information about a given osu player
+
+`!osub <link> <version>` - Shows information about a given beatmap.
+
+**Useful:**
+
+`!invite` - Gives an invite link to the server.
+
+**Admin:**
+
+`!setinfo <info>` - Sets the server info.
 
 
 # Feature Requests:

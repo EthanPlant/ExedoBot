@@ -1,8 +1,7 @@
 const request = require('request')
-const config = require('./../config.json')
 const Discord = require('discord.js')
 
-const apiKey = config.osukey
+const apiKey = require('./../config.json').osukey
 
 exports.run = (client, message, args) => {
   if (!args[0]) {

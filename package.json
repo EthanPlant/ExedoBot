@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js --ignore data/servers.json",
+    "lint": "standard --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +26,13 @@
     "ytdl-core": "^0.18.2"
   },
   "devDependencies": {
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "standard": "^10.0.3"
+  },
+  "standard": {
+    "ignore": [
+      "/data/copypasta.js",
+      "/data/lenny.js"
+    ]
   }
 }

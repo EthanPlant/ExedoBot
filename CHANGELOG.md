@@ -54,3 +54,4 @@
 - Hotfixed bug causing crash on server connect (full fix to come in 1.1.0)
     - `!setinfo` HAS BEEN REMOVED AND SERVER INFO HAS BEEN MOVED BACK INTO CONFIG.JSON. SHOULD BE RETURNING ASAP.
 - Hotfixed !avatar not working when a user is mentioned.
+- Fixed Invalid osu API key bug
